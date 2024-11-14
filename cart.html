@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+    <link rel="stylesheet" href="css/style.css"> 
+    <title>Giỏ Hàng</title>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row-flex">
+                <div class="header-bar-icon">
+                    <i class='bx bx-menu'></i>
+                </div>
+                <div class="header-logo">
+                    <img src="./images/logo.png" alt="">
+                </div>
+                <div class="header-logo-mobile">
+                    <img src="./images/logo.png" alt="">
+                </div>
+                <div class="header-nav active">
+                    <nav>
+                        <ul>
+                            <li><a href="./index.html">TRANG CHỦ</a></li>
+                            <li><a href="./sanpham.html">SẢN PHẨM</a></li>
+                            <li><a href="./bosuutap.html">BỘ SƯU TẬP</a></li>
+                            <li><a href="./posts.html">BÀI VIẾT</a></li>
+                            <li><a href="./contact.html">LIÊN HỆ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-search">
+                    <input type="text" placeholder="Tìm kiếm ">
+                    <i class='bx bx-search'></i>
+                </div>
+                <div class="header-cart">
+                    <a href="./cart.html"><i class='bx bx-cart-alt' number="3" ></i></a>
+                </div>
+                <div class="header-user">
+                    <i id="userIcon" class='bx bxs-user '></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- slider  -->
+    <section class="slider-cart">
+        <div class="slider-items">
+            <div class="slider-item">
+                <!-- <img src="./images/slidersp.jpeg" alt=""> -->
+            </div>
+        </div>
+    </section>
+<!------------------- CART -->
+<section class="cart-section p-to-top">
+    <div class="container">
+        <div class="row-grid">
+            <p class="heading-text">GIỎ HÀNG</p>
+        </div>
+        <div class="row-grid">
+            <div class="cart-section-left">
+                <h2 class="main-h2">Chi Tiết Đơn Hàng</h2>
+                <div class="cart-section-left-detail">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ảnh</th>
+                                <th>Sản Phẩm</th>
+                                <th>Thành Tiền</th>
+                                <th>Xoá</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img style="width: 70px;" src="./images-sp/ao1.jpeg" alt=""></td>
+                                <td>
+                                    <div class="product-detail-right-infor">
+                                        <h1>Áo Sơ Mi Dài Tay Essentials Cotton</h1>  
+                                        <div class="hot-product-item-price">
+                                            <p>350,000 <sup>đ</sup> <span>50,000<sup>đ</sup></span></p>
+                                        </div>
+                                    </div>
+                                    <div class="product-detail-right-quantity-input">
+                                        <i class='bx bx-minus' onclick="decrementQuantity(this)"></i>
+                                        <input onkeydown="return false" class="quantity-input" type="number" value="1" disabled>
+                                        <i class='bx bx-plus' onclick="incrementQuantity(this)"></i>
+                                    </div>
+                            
+                                </td>
+                                <td>
+                                    <p class="product-detail-right-tong-tien">350,000 <sup>đ</sup></p>
+                                </td>
+                                <td><i class='bx bx-x' onclick="removeItem(this)"></i></td> 
+                            </tr>                           
+                            <tr>
+                                <td><img style="width: 70px;" src="./images-sp/ao2.jpeg" alt=""></td>
+                                <td>
+                                    <div class="product-detail-right-infor">
+
+                                        
+                                        <h1>Áo Polo nam Excool Essentials</h1>  
+                                        <div class="hot-product-item-price">
+                                            <p>440,000 <sup>đ</sup> <span>50,000<sup>đ</sup></span></p>
+                                        </div>
+                                    </div>
+                                    <div class="product-detail-right-quantity-input">
+                                        <i class='bx bx-minus' onclick="decrementQuantity(this)"></i>
+                                        <input onkeydown="return false" class="quantity-input" type="number" value="1" disabled>
+                                        <i class='bx bx-plus' onclick="incrementQuantity(this)"></i>
+                                    </div>
+                            
+                                </td>
+                                <td>
+                                    <p class="product-detail-right-tong-tien">350,000 <sup>đ</sup></p>
+                                </td>
+                                <td><i class='bx bx-x' onclick="removeItem(this)"></i></td> 
+                            </tr>                           
+                            <tr>
+                                <td><img style="width: 70px;" src="./images-sp/ao6.jpeg" alt=""></td>
+                                <td>
+                                    <div class="product-detail-right-infor">
+                                        <h1>Áo Thun Nam Chạy Bộ Graphic Jungle</h1>  
+                                        <div class="hot-product-item-price">
+                                            <p>150,000 <sup>đ</sup> <span>50,000<sup>đ</sup></span></p>
+                                        </div>
+                                    </div>
+                                    <div class="product-detail-right-quantity-input">
+                                        <i class='bx bx-minus' onclick="decrementQuantity(this)"></i>
+                                        <input onkeydown="return false" class="quantity-input" type="number" value="1" disabled>
+                                        <i class='bx bx-plus' onclick="incrementQuantity(this)"></i>
+                                    </div>
+                            
+                                </td>
+                                <td>
+                                    <p class="product-detail-right-tong-tien">150,000 <sup>đ</sup></p>
+                                </td>
+                                <td><i class='bx bx-x' onclick="removeItem(this)"></i></td> 
+                            </tr>                           
+                            
+                                                      
+                        </tbody>                   
+                    </table>
+                    <div class="product-detail-right-tinh-tong">
+                        <p>Tổng đơn hàng </p>
+                        <span>100.000</span>
+                    </div>
+                    <br>
+                    <a href="./lichsumua.html"><button class="main-btn">Lịch sử mua hàng</button></a>
+                    <a style="color: brown; font-size: initial;" href=""> >> Tiếp tục mua hàng</a>
+                </div>
+            </div>
+            <div class="cart-section-right">
+                <h2 class="main-h2">Thông Tin Giao Hàng</h2>
+                <div class="cart-section-right-input-name-phone">
+                    <input type="text" placeholder="Tên" name="name" id="name">
+                    <input type="text" placeholder="Điện Thoại" name="phone" id="phone">
+                </div>
+                <div class="cart-section-right-input-email">
+                    <input type="text" placeholder="Email" name="email" id="email">    
+                </div>
+                <div class="cart-section-right-section">
+                    <select name="city" id="city">
+                        <option value="">Tỉnh/Thành Phố</option>
+                        <option value="">Đà Nẵng</option>
+                        <option value="">Quảng Trị</option>
+                        <option value="">Hà Nội</option>
+                        <option value="">Sài Gòn</option>
+                        <option value="">Huế</option>
+                        <option value="">Hà Tĩnh</option>
+                        <option value="">Nghệ An</option>
+                        <option value="">Quảng Bình</option>
+                        <option value="">Kom Tum</option>
+                        <option value="">Gia lai</option>
+                        <option value="">Phú Yên</option>
+                    </select>
+                    <select name="" id="district">
+                        <option value="Hải Châu">Hải Châu</option>
+                        <option value="Thanh Khê">Thanh Khê</option>
+                        <option value="Sơn Trà">Sơn Trà</option>
+                        <option value="Ngũ Hành Sơn">Ngũ Hành Sơn</option>
+                        <option value="Cẩm Lệ">Cẩm Lệ</option>
+                        <option value="Liên Chiểu">Liên Chiểu</option>
+                    </select>
+                    <select name="" id="ward">
+                        <option value="">Phường/Xã</option>
+                        <option value="">Phường/Xã</option>
+                        <option value="Hòa Cường Bắc">Hòa Cường Bắc</option>
+                        <option value="Hòa Cường Bắc">Hòa Cường Bắc</option>
+                        <option value="Hòa Cường Nam">Hòa Cường Nam</option>
+                        <option value="Hòa Cường Tây">Hòa Cường Tây</option>
+                        <option value="Hòa Cường Đông">Hòa Cường Đông</option>
+                        <option value="Hòa Minh">Hòa Minh</option>
+                        <option value="Hòa Khánh Bắc">Hòa Khánh Bắc</option>
+                        <option value="Hòa Khánh Nam">Hòa Khánh Nam</option>
+                        <option value="Hòa Thuận Đông">Hòa Thọ Đông</option>
+                        <option value="Hòa Thuận Tây">Hòa Thọ Tây</option>
+                        <option value="Hòa Thuận Đông">Hòa Thọ Đông</option>
+                        <option value="Hòa Xuân">Hòa Xuân</option>
+                        <option value="Hòa Phát">Hòa Phát</option>
+                        <option value="Hòa Phong">Hòa Phong</option>
+                        <option value="Hòa Khê">Hòa Khê</option>
+                        <option value="An Hải Bắc">An Hải Bắc</option>
+                        <option value="An Hải Đông">An Hải Đông</option>
+                        <option value="An Hải Tây">An Hải Tây</option>
+                        <option value="An Hải Trung">An Hải Trung</option>
+                    </select>
+                </div>
+                <div class="cart-section-right-input-adress">
+                    <input type="text" placeholder="Địa Chỉ" name="address" id="address">
+                </div>
+                <div class="cart-section-right-input-note">
+                    <input type="text" placeholder="Ghi Chú" name="note" id="note">
+                </div>
+                <a href="./xacnhandon.html"><button class="main-btn"> Đặt Hàng</button></a>
+                
+            </div>
+        </div>
+    </div>
+</section>
+  
+<!-------------------PRODUCT (SANPHAM) -->
+<section class="hot-products">
+    <div class="container">
+        <div class="row-grid">
+            <p class="heading-text">SẢN PHẨM MỚI</p>
+        </div>
+        <div class="row-grid row-grid-hot-products">
+
+            <div class="hot-product-item">
+                <a href=""><img src="./images-sp/ao1.jpeg" alt=""></a>
+                <a href=""><p>Áo Sơ Mi Dài Tay Essentials Cotton</p></a>
+                <span>100% cotton</span>
+                <div class="hot-product-item-price">
+                    <p>350,000 <sup>đ</sup> <span>50,000<sup>đ</sup></span></p>
+                </div>
+            </div>
+
+            <div class="hot-product-item">
+                <a href=""><img src="./images-sp/ao2.jpeg" alt=""></a>
+                <a href=""><p>Áo Polo nam Excool Essentials</p></a>
+                <span>100% cotton</span>
+                <div class="hot-product-item-price">
+                    <p>440,000 <sup>đ</sup> <span>50,000<sup>đ</sup></span></p>
+                </div>
+            </div>
+
+            <div class="hot-product-item">
+                <a href=""><img src="./images-sp/ao3.jpeg" alt=""></a>
+                <a href=""><p>Áo Polo nam Excool Essentials</p></a>
+                <span>100% cotton</span>
+                <div class="hot-product-item-price">
+                    <p>440,000 <sup>đ</sup> <span>50,000<sup>đ</sup></span></p>
+                </div>
+            </div>
+
+            <div class="hot-product-item">
+                <a href=""><img src="./images-sp/ao4.jpeg" alt=""></a>
+                <a href=""><p>Áo Polo nam Excool Essentials</p></a>
+                <span>100% cotton</span>
+                <div class="hot-product-item-price">
+                    <p>440,000 <sup>đ</sup> <span>50,000<sup>đ</sup></span></p>
+                </div>
+            </div>
+
+            <div class="hot-product-item">
+                <a href=""><img src="./images-sp/ao5.jpeg" alt=""></a>
+               <a href=""> <p>Áo Polo Thể Thao Active Premium</p></a>
+                <span>100% cotton</span>
+                <div class="hot-product-item-price">
+                    <p>350,000 <sup>đ</sup> <span>30,000<sup>đ</sup></span></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--------------------FOOTER-->
+<footer>
+    <div class="container">
+        <div class="row-grid">
+            <div class="footer-item">
+                <p>VỀ CHÚNG TÔI</p>
+                <p>Team 03</p>
+                <p>Đăng kí thành viên</p>
+                <p>Ưu đãi & Đặc quyền</p>
+            </div>
+            <div class="footer-item">
+                <p>CHÍNH SÁCH</p>
+                <p>Chính sách đổi trả 60 ngày</p>
+                <p>Chính sách khuyến mãi</p>
+                <p>Chính sách bảo mật</p>
+                <p>Chính sách giao hàng</p>
+            </div>
+            <div class="footer-item">
+                <p>CHĂM SÓC KHÁCH HÀNG</p>
+                <p>Trải nghiệm mua sắm 100% hài lòng</p>
+                <p>Hỏi đáp - FAQs</p>    
+            </div>
+            <div class="footer-item">
+                <p>ĐỊA CHỈ LIÊN HỆ</p>
+                <p>Văn phòng và trung tâm vận hành Đà Nẵng: Tầng 3, Tòa nhà R, Đường Nguyễn Hữu Thọ, Quận Hải Châu, TP Đà Nẵng</p>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="./js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <!-- <script src="asset/js/apiprovince.js"></script> -->
+</body>
+</html>
